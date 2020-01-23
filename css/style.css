@@ -102,7 +102,7 @@ body {
 
 
 .main-content {
-  width: calc(100% - 30%);
+  width: 70%;
 }
 .main-content-header {
   width: 100%;
@@ -110,15 +110,18 @@ body {
   background-color: yellow;
 }
 .main-content-main {
-  width: 100%;
   height:82%;
+  display: flex;
+  overflow-y: scroll;
+  background: #e0e0e0;
+}
+.colonna-sinistra{
+  width: 50%;
 }
 
-.sfondo {
-  width: 100%;
-  height: 100%;
+.colonna-destra{
+  width: 50%;
 }
-
 
 
 .main-content-footer {
@@ -143,4 +146,21 @@ body {
   height: 42px;
   border-top: white;
   border-left: white;
+}
+
+.prova {
+  display: none;
+}
+.elemento-destra{
+  float: right;
+  display: inline-block;
+  background-color: white;
+  padding: 20px 40px;
+  border-radius: 5px;
+  margin: 20px;
+}
+.elemento-destra:after{
+  content: "";
+  display: table;
+  clear: both;
 }
