@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  color : grey;
+}
+
+.wrapper {
+  width: 73%;
+  background-color: red;
+  height: 96vh;
+  display: flex;
+  margin: 15px auto;
+}
+
+.body-header-top {
+  background-color: blue;
+  height: 13vh;
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+.body-header-bottom {
+  background-color: grey;
+  height: 87vh;
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  top: 13%;
+}
+.main-nav {
+ display: flex;
+ flex-direction: column;
+ width: 30%;
+ height: 100%;
+ background-color: #000000;
+}
+
+
+.main-nav-header {
+  width: 100%;
+  height: 10%;
+  background-color: #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.omini{
+  height: 50px;
+  width: 50px;
+  border-radius: 20px;
+  margin-left: 10px;
+}
+.fas  {
+  color : grey;
+  font-size: 20px;
+  margin-left: 10px;
+  margin-right: 15px;
+}
+.notifiche {
+  width: 100%;
+  height: 86px;
+  background-color: lightblue;
+  display: flex;
+  align-items: center;
+}
+
+.mess {
+  display: flex;
+  flex-direction: column;
+}
+
+.sfondo-campana {
+  height: 40px;
+  border-radius: 34px;
+  background: white;
+  margin: 13px;
+  display: flex;
+  align-items: center;
+}
+.stile_campana {
+  font-size: 17px;
+}
+.cerca {
+  width: 100%;
+  height: 50px;
+  background-color: grey;
+}
+.lista-utenti {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+.main-nav-main {
+  width: 100%;
+  height: 70px;
+  background-color: grey;
+}
+
+
+.main-content {
+  width: calc(100% - 30%);
+  height:100%;
+  background-color: black;
+}
+.main-content-header {
+  width: 100%;
+  height:8%;
+  background-color: yellow;
+}
+.main-content-main {
+  width: 100%;
+  height:82%;
+  background-color: red;
+}
+
+.sfondo {
+  width: 100%;
+  height: 100%;
+}
+.main-content-footer {
+  width: 100%;
+  height: 10%;
+  background-color: blue;
+}
