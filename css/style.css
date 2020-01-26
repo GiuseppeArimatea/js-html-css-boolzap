@@ -125,7 +125,9 @@ body {
   list-style: none;
   padding: 5px;
 }
-
+.nomi {
+  color: black;
+}
 .elemento-contatto {
   display: flex;
   padding: 10px;
@@ -258,7 +260,9 @@ body {
   clear: both;
   background-color: green;
 }
-
+.message-text{
+  color: white;
+}
 .message.received {
   float: left;
   clear: both;
@@ -270,4 +274,10 @@ body {
 }
 .active_name_off {
   display: none!important;
+}
+
+.ricevuto {
+  float: left;
+  clear: both;
+  background-color: white;
 }
