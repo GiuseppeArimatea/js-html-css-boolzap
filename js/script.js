@@ -45,20 +45,28 @@ function addZero(number) {
 // messaggio di ritorno
 function miFaPiacere(){
 
-    var textReceive = ('Mi fa piacere');
-    var elementNew = $('.template .message').clone();
-    $('.active').append(elementNew);
-    elementNew.addClass('ricevuto');
-    elementNew.find('.message-text').append(textReceive);
+    var messageResponse = $('.template .message').clone();
+    elementNew.find('.message-text').text('Mi fa piacere');
+    var data = new Date();
+    var hours = addZero(data.getHours());
+    var minutes = addZero(data.getMinutes());
+    var time = hours +':'+ minutes;
 
+    messageResponse.find('.message-time').text(time);
+    messageResponse.addClass('ricevuto');
+    $('.col-right-messages.active').append(messageResponse);
 };
 // funzione ricerca tra i nomi dei contatti
-  $('.search_click').click(function(){ // 1
-    var search = $('.cerca-chat').val(); // prendiamo i valori dall input
-    var name = $('.persona p:first-child').text().toLowerCase(); // prendiamo i valori selettori
-    var container = $("p.nomi:contains(" + search + ")") // selezioniamo le stringhe e controlliamo i valori
-    $('.elemento-contatto').addClass('active_name_off');
-    container.parents().removeClass('active_name_off');
-  });
+  $('.cerca input').keyup(function(){ // 1
+    var text = $('.cerca input').val().toLowerCase(); // prendiamo i valori dall input
 
+    $('.elemento-contatto').each(function () {
+      var contactName = $(this).find('.elemento-contatto').text().toLowerCase();
+      if (contactName.includes(text) == true) {
+        $(this).show();
+      } else {
+        $(this).hide();
+      }
+    });
+  });
 });
