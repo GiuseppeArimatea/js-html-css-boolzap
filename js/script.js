@@ -92,15 +92,20 @@ function addZero(number) {
   }
   return number;
 }
-// Click sul contatto mostra la conversazione del contatto cliccato, è possibile inserire nuovi messaggi per ogni conversazione
-// Cancella messaggio: cliccando sul messaggio appare un menu a tendina che permette di cancellare il messaggio selezionato
 
-// $(document).ready(
-//   function () {
-//     $('.col-right-messages > i.message-options').click(
-//       function () {
-//         $(this).next('.dropdown').toggleClass('active');
-//       }
-//     );
-//   }
-// );
+// menu icon-down
+var visible = false;
+$(document).on('click', '.message-top', function() {
+  if (visible == false) {
+    $(this).find('.message_menu').fadeIn();
+    visible = true;
+  } else {
+    $(this).find('.message_menu').fadeOut();
+    visible = false;
+  }
+});
+
+// RIMUOVE I MESSAGGI
+$(document).on('click', '.delete-message', function() {
+    $(this).parent().parent().parent().remove();
+});
