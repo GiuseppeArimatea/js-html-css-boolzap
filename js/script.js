@@ -14,6 +14,22 @@
 
 
 
+// funzione ricerca tra i nomi dei contatti
+  $('.cerca input').keyup(function(){
+    var text = $('.cerca input').val().toLowerCase(); // prendiamo i valori dall input
+    console.log(text);
+    $('.elemento-contatto').each(function () { // prendiamo degli elementi tramite each
+      var contactName = $(this).find('.nomi').text().toLowerCase(); // prendiamo tutti gli elementi dentro nomi = this tramite find
+      if (contactName.includes(text) == true) { // se i nomi sono uguali all input da tastiera li mostriamo
+        $(this).show();
+      } else {
+        $(this).hide();
+      }
+    });
+  });
+
+
+});
 
 // -------FUNZIONI ------
 // funzione sendMessage
@@ -41,14 +57,10 @@ function sendMessage() {
   setTimeout(function(){ // mandiamo risposta dopo un secondo
       miFaPiacere();
     }, 1000);
+  }
 }
 
-function addZero(number) {
-  if(number < 10) {
-    number = '0' + number;
-  }
-  return number;
-}
+
 
 // messaggio di ritorno
 function miFaPiacere(){
@@ -65,19 +77,6 @@ function miFaPiacere(){
 };
 
 
-// funzione ricerca tra i nomi dei contatti
-  $('.cerca input').keyup(function(){ // 1
-    var text = $('.cerca input').val().toLowerCase(); // prendiamo i valori dall input
-    $('.elemento-contatto').each(function () { // prendiamo degli elementi tramite each
-      var contactName = $(this).find('.nomi').text().toLowerCase(); // prendiamo tutti gli elementi dentro nomi = this tramite find
-      if (contactName.includes(text) == true) { // se i nomi sono uguali all input da tastiera li mostriamo
-        $(this).show();
-      } else {
-        $(this).hide();
-    }
-  });
-});
-
 // funzione che scrolla
 function scrollMessage() {
    // altezza elemento conversazione attiva
@@ -86,4 +85,22 @@ function scrollMessage() {
     // spostiamo scroll container di tutte le conversazioni
     $('.main-content').scrollTop(heightContainer);
 }
-}});
+
+function addZero(number) {
+  if(number < 10) {
+    number = '0' + number;
+  }
+  return number;
+}
+// Click sul contatto mostra la conversazione del contatto cliccato, è possibile inserire nuovi messaggi per ogni conversazione
+// Cancella messaggio: cliccando sul messaggio appare un menu a tendina che permette di cancellare il messaggio selezionato
+
+// $(document).ready(
+//   function () {
+//     $('.col-right-messages > i.message-options').click(
+//       function () {
+//         $(this).next('.dropdown').toggleClass('active');
+//       }
+//     );
+//   }
+// );

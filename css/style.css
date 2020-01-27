@@ -287,3 +287,19 @@ body {
   clear: both;
   background-color: white;
 }
+.dropdown {
+  position: absolute;
+  top: 80px;
+  right: -55px;
+  width: 300px;
+  padding: 20px;
+  display: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: white;
+  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5));
+}
+
+.dropdown.active {
+  display: flex;
+}
