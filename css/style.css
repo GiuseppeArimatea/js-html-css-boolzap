@@ -261,7 +261,7 @@ body {
   background-color: green;
 }
 .message-text{
-  color: white;
+  color: black;
 }
 .message.received {
   float: left;

@@ -46,7 +46,7 @@ function addZero(number) {
 function miFaPiacere(){
 
     var messageResponse = $('.template .message').clone();
-    elementNew.find('.message-text').text('Mi fa piacere');
+    messageResponse.find('.message-text').text('Mi fa piacere');
     var data = new Date();
     var hours = addZero(data.getHours());
     var minutes = addZero(data.getMinutes());
@@ -56,12 +56,14 @@ function miFaPiacere(){
     messageResponse.addClass('ricevuto');
     $('.col-right-messages.active').append(messageResponse);
 };
+
+
 // funzione ricerca tra i nomi dei contatti
   $('.cerca input').keyup(function(){ // 1
     var text = $('.cerca input').val().toLowerCase(); // prendiamo i valori dall input
 
     $('.elemento-contatto').each(function () {
-      var contactName = $(this).find('.elemento-contatto').text().toLowerCase();
+      var contactName = $(this).find('.nomi').text().toLowerCase();
       if (contactName.includes(text) == true) {
         $(this).show();
       } else {
