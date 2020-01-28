@@ -60,125 +60,125 @@
     <!-- lista utenti -->
     <section class="lista-utenti">
       <ul class="lista-contatti">
-        <li class="elemento-contatto active">
+        <li class="elemento-contatto active" data-contact="0">
           <div class="avatar">
             <img src="img/avatar_3.jpg" alt="Pincopallo">
           </div>
           <div class="info">
             <div class="persona">
               <p class="nomi">Michele</p>
-              <p class="contact-time">17.53</p>
+              <small class="contact-time">Ultimo accesso oggi alle 17.49</small>
             </div>
             <div class="contact-info-bottom">
               <p>è disponibile</p>
             </div>
           </div>
           </li>
-        <li class="elemento-contatto">
+        <li class="elemento-contatto" data-contact="1">
           <div class="avatar">
             <img src="img/avatar_4.jpg" alt="Pincopallo">
           </div>
           <div class="info">
             <div class="persona">
               <p class="nomi">Fabio</p>
-              <p class="contact-time">18.00</p>
+              <small class="contact-time">Ultimo accesso oggi alle 21.30</small>
             </div>
             <div class="contact-info-bottom">
               <p>è disponibile</p>
             </div>
           </div>
           </li>
-        <li class="elemento-contatto">
+        <li class="elemento-contatto" data-contact="2">
           <div class="avatar">
             <img src="img/avatar_5.jpg" alt="Pincopallo">
           </div>
           <div class="info">
             <div class="persona">
               <p class="nomi">Samuele</p>
-              <p class="contact-time">19.30</p>
+              <small class="contact-time">Ultimo accesso oggi alle 19.45</small>
             </div>
             <div class="contact-info-bottom">
               <p>è disponibile</p>
             </div>
           </div>
           </li>
-          <li class="elemento-contatto">
+          <li class="elemento-contatto" data-contact="3">
       <div class="avatar">
         <img src="img/avatar_6.jpg" alt="Pincopallo">
       </div>
       <div class="info">
         <div class="persona">
           <p class="nomi">Claudia</p>
-          <p class="contact-time">20.00</p>
+          <small class="contact-time">Ultimo accesso oggi alle 16.35</small>
         </div>
         <div class="contact-info-bottom">
           <p>è disponibile</p>
         </div>
       </div>
-      <li class="elemento-contatto">
+      <li class="elemento-contatto" data-contact="4">
         <div class="avatar">
           <img src="img/avatar_7.jpg" alt="Pincopallo">
         </div>
         <div class="info">
           <div class="persona">
             <p class="nomi">Alessandro</p>
-            <p class="contact-time">21.00</p>
+            <small class="contact-time">Ultimo accesso oggi alle 17.40</small>
           </div>
           <div class="contact-info-bottom">
             <p>è disponibile</p>
           </div>
         </div>
         </li>
-        <li class="elemento-contatto">
+        <li class="elemento-contatto" data-contact="5">
           <div class="avatar">
             <img src="img/avatar_8.jpg" alt="Pincopallo">
           </div>
           <div class="info">
             <div class="persona">
               <p class="nomi">Davide</p>
-              <small class="contact-time">22.00</small>
+              <small class="contact-time">Ultimo accesso oggi alle 14.59</small>
             </div>
             <div class="contact-info-bottom">
               <p>è disponibile</p>
             </div>
           </div>
           </li>
-          <li class="elemento-contatto">
+          <li class="elemento-contatto" data-contact="6">
             <div class="avatar">
               <img src="img/avatar_io.jpg" alt="Pincopallo">
             </div>
             <div class="info">
               <div class="persona">
                 <p class="nomi">Mario</p>
-                <small class="contact-time">23.00</small>
+                <small class="contact-time">Ultimo accesso oggi alle 15.55</small>
               </div>
               <div class="contact-info-bottom">
                 <p>è disponibile</p>
               </div>
             </div>
             </li>
-            <li class="elemento-contatto">
+            <li class="elemento-contatto" data-contact="7">
               <div class="avatar">
                 <img src="img/avatar_2.jpg" alt="Pincopallo">
               </div>
               <div class="info">
                 <div class="persona">
                   <p class="nomi">Federico</p>
-                  <p class="contact-time">00.00</p>
+                  <small class="contact-time">Ultimo accesso oggi alle 00.40</small>
                 </div>
                 <div class="contact-info-bottom">
                   <p>è disponibile</p>
                 </div>
               </div>
               </li>
-              <li class="elemento-contatto">
+              <li class="elemento-contatto" data-contact="8">
                 <div class="avatar">
                   <img src="img/avatar_1.jpg" alt="Pincopallo">
                 </div>
                 <div class="info">
                   <div class="persona">
                     <p class="nomi">Carmelo</p>
-                    <p class="contact-time">01.00</p>
+                    <small class="contact-time">Ultimo accesso oggi alle 00.00</small>
                   </div>
                   <div class="contact-info-bottom">
                     <p>è disponibile</p>
@@ -198,7 +198,10 @@
     <div class="main-content-header">
       <div class="dati">
       <img class="omini" src="./img/avatar_2.jpg" alt="">
-        <p>Federico <br> Ultimo accesso oggi alle 15.40</p>
+        <div class="contact-active">
+          <p class="contact-name">Federico </p>
+          <small class="contact-time">Ultimo accesso oggi alle 15.40</small>
+        </div>
       </div>
     <div class="icone">
       <i class="fas fa-search"></i>
@@ -210,6 +213,64 @@
       <div class="message sent">
         <div class="message-top">
           <p class="message-text">Ciao come stai?</p>
+          <i class="fa fa-chevron-down f-right message-options"></i>
+        </div>
+        <div class="message-bottom">
+          <small class="message-time">10:40</small>
+        </div>
+      </div>
+      <div class="message received">
+        <div class="message-top">
+          <p class="message-text">Bene tu?</p>
+          <i class="fa fa-chevron-down f-right message-options"></i>
+        </div>
+        <div class="message-bottom">
+          <small class="message-time">10:40</small>
+        </div>
+      </div>
+      <div class="message sent">
+        <div class="message-top">
+          <p class="message-text">Tutto bene</p>
+          <i class="fa fa-chevron-down f-right message-options"></i>
+        </div>
+        <div class="message-bottom">
+          <small class="message-time">10:40</small>
+        </div>
+      </div>
+    </div>
+    <div class="col-right-messages" data-contact="1">
+      <div class="message sent">
+        <div class="message-top">
+          <p class="message-text">Ciao!</p>
+          <i class="fa fa-chevron-down f-right message-options"></i>
+        </div>
+        <div class="message-bottom">
+          <small class="message-time">10:40</small>
+        </div>
+      </div>
+      <div class="message received">
+        <div class="message-top">
+          <p class="message-text">Bene tu?</p>
+          <i class="fa fa-chevron-down f-right message-options"></i>
+        </div>
+        <div class="message-bottom">
+          <small class="message-time">10:40</small>
+        </div>
+      </div>
+      <div class="message sent">
+        <div class="message-top">
+          <p class="message-text">Tutto bene</p>
+          <i class="fa fa-chevron-down f-right message-options"></i>
+        </div>
+        <div class="message-bottom">
+          <small class="message-time">10:40</small>
+        </div>
+      </div>
+    </div>
+    <div class="col-right-messages" data-contact="2">
+      <div class="message sent">
+        <div class="message-top">
+          <p class="message-text">Ehy come va?</p>
           <i class="fa fa-chevron-down f-right message-options"></i>
         </div>
         <div class="message-bottom">
@@ -249,15 +310,15 @@
   <div class="template">
     <div class="message">
       <div class="message-top">
-        <p class="message-text"></p>
-        <i class=" fa fa-chevron-down f-right message-options"></i>
+          <p class="message-text"></p>
+          <i class="fa fa-chevron-down f-right message-options"></i>
           <ul class="message_menu">
             <li>Info messaggio</li>
             <li class="delete-message">Cancella messaggio</li>
           </ul>
         </div>
         <div class="message-bottom">
-        <small class="message-time"></small>
+        <small class="message-time"></small>iv
       </div>
     </div>
   </div>

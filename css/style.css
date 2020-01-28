@@ -204,8 +204,17 @@ body {
   margin-left: 15px;
 }
 .dati p {
-  margin-left: 15px;
   color: black;
+}
+.contact-active {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+}
+
+.fa {
+  font-size: 20px;
+  color:grey;
 }
 /* /main content */
 

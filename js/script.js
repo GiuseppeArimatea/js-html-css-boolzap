@@ -27,9 +27,31 @@
       }
     });
   });
-
-
+  $('.send-message').focus(function(){
+    $('.icon-send i').removeClass('fa fa-microphone').addClass('fas fa-paper-plane');
+  }).blur(function(){
+    $('.icon-send i').removeClass('fas fa-paper-plane').addClass('fa fa-microphone');
+  });
 });
+
+// funzione cambio elemento contatto
+  $(document).on('click', '.elemento-contatto', function() {
+  var data = $(this).attr('data-contact');
+  var selector = '.col-right-messages[data-contact="' + data + '"]';
+
+  $('.col-right-messages').removeClass('active');
+  $(selector).addClass('active');
+  $('.elemento-contatto').removeClass('active');
+  $(this).addClass('active');
+
+  var name = $(this).find('.nomi').text();
+  var time = $(this).find('.contact-time').text();
+  var img = $(this).find('.avatar img').attr('src');
+  $('.main-content-header .dati .contact-name').text(name);
+  $('.main-content-header .dati .contact-time').text(time);
+  $('.main-content-header .dati img').attr('src', img);
+  });
+
 
 // -------FUNZIONI ------
 // funzione sendMessage
@@ -105,7 +127,7 @@ $(document).on('click', '.message-top', function() {
   }
 });
 
-// RIMUOVE I MESSAGGI
+// rimuovo messaggi
 $(document).on('click', '.delete-message', function() {
-    $(this).parent().parent().parent().remove();
+    $(this).parents('.message').remove();
 });
